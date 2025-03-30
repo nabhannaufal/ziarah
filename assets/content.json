@@ -24,18 +24,22 @@
       "title": "Tawasul",
       "content": [
         {
-          "arabicText": "إِلَى حَضْرَةِ النَّبِيِّ الْمُصْطَفَى سَيِّدِنَا مُحمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وَاٰلِهِ وَأَزْوَاجِهِ وَأَوْلَادِهِ وَذُرِّيَّاتِهِ الْفَــاتِحَةُ",
-          "latin": "Ila ḫadlratin-nabiyyil-muṣṭhafâ sayyidinâ Muḥammadin ṣallallâhu ‘alaihi wa sallama wa âlihi wa azwâjihi wa awlâdihi wa dzurriyyâtihi al-fâtiḥah",
-          "translation": "Kepada yang terhormat Nabi Muhammad ﷺ, segenap keluarga, istri-istrinya, anak-anaknya, dan keturunannya. Bacaan Al-Fatihah ini kami tujukan kepada اللّٰهِ dan pahalanya untuk mereka semua. Al-Fatihah…",
-          "text": "Tawasul (Perantara Do'a) yang ditujukan kepada Nabi Muhammad ﷺ dan keluarganya.",
+          "arabicText": "إِلَى حَضْرَةِ النَّبِيِّ الْمُصْطَفَى سَيِّدِنَا مُحمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وَاٰلِهِ وَأَصْحَابِهِ أَجْمَعِيْنَ الْفَــاتِحَةُ",
+          "latin": "Ilā ḥaḍratin-nabiyyil-muṣṭafā sayyidinā Muḥammadin ṣallallāhu 'alaihi wa sallama wa ālihi wa aṣḥābihi ajma'īn al-fātiḥah",
+          "translation": "Kepada yang terhormat Nabi Muhammad ﷺ, beserta keluarga dan para sahabatnya. Al-Fatihah...",
           "note": "Setelah ini membaca surat Al-Fatihah."
         },
-
         {
-          "arabicText": "ثُمَّ إِلَى جَمِيْعِ أهْلِ الْقُبُوْرِ مِمَّنْ ذُكِرَتْ أَسْمَاؤُهُ فِيْ هٰذِهِ الرِّسَالَةِ حَضْرَةِ رُوْحِ … وَحَضْرَةِ رُوْحِ … وَحَضْرَةِ رُوْحِ … رَحِمَهُمُ اللهُ وَغَفَرَهُمْ، الْفَاتِحَةُ",
-          "latin": "Tsumma ilâ jamî‘i ahlil-qubûri mimman dzukirat asmâ’uhu fî hâdzihir-risâlati, ḥadlrati rûḥi…, wa ḥadlrati rûḥi…, wa ḥadlrati rûḥi…, raḥimahumullâhu wa ghafarahum, al-fâtiḥah",
-          "translation": "Kemudian kepada semua ahli kubur, yang namanya disebutkan dalam risalah ini. Kepada…, dan kepada…, dan kepada…. Semoga اللّٰهِ merahmati dan mengampuni mereka. Bacaan Al-Fatihah ini kami tujukan kepada اللّٰهِ dan pahalanya untuk mereka semua. Al-Fatihah.",
-          "note": "Bagian [...] diisi dengan nama-nama yang diziarahi."
+          "arabicText": "ثُمَّ خُصُوْصًا إِلَى رُوْحِ (الْمَرْحُوْمِ/الْمَرْحُوْمَةِ) [...] رَحِمَهُ/رَحِمَهَا اللهُ تَعَالَى الْفَاتِحَةُ",
+          "latin": "Tsumma khuṣūṣan ilā rūḥi (al-marḥūmi/al-marḥūmati) [...] raḥimahu/raḥimahāllāhu ta'ālā al-fātiḥah",
+          "translation": "Kemudian khususnya kepada ruh (almarhum/almarhumah) [...] semoga Allah Ta'ala merahmatinya. Al-Fatihah...",
+          "note": "Bagian [...] diisi dengan nama orangtua yang telah wafat. Gunakan \"al-marḥūmi\" untuk ayah dan \"al-marḥūmati\" untuk ibu. Gunakan \"raḥimahu\" untuk ayah dan \"raḥimahā\" untuk ibu."
+        },
+        {
+          "arabicText": "ثُمَّ إِلَى جَمِيْعِ أَهْلِ الْقُبُوْرِ مِنْ أَقَارِبِنَا وَذَوِي الْحُقُوْقِ عَلَيْنَا وَمَنْ سَبَقَنَا بِالْإِيْمَانِ الْفَاتِحَةُ",
+          "latin": "Tsumma ilā jamī'i ahlil-qubūri min aqāribinā wa dzawil-ḥuqūqi 'alainā wa man sabaqanā bil-īmāni al-fātiḥah",
+          "translation": "Kemudian kepada semua ahli kubur dari kerabat kami, orang-orang yang memiliki hak atas kami, dan mereka yang telah mendahului kami dalam keimanan. Al-Fatihah...",
+          "note": "Setelah ini membaca surat Al-Fatihah."
         }
       ]
     },
