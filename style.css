@@ -1,0 +1,437 @@
+@font-face {
+    font-family: 'LPMQ Isep Misbah';
+    src: url('assets/fonts/LPMQ-IsepMisbah.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.card {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-decoration {
+    height: 5px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+.card h2 {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    padding: 15px 20px;
+    margin: 0;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.collapsible {
+    font-family: 'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #444;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 19px;
+    font-weight: 600;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s;
+}
+
+.collapsible:after {
+    content: '\002B';
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.collapsible:hover {
+    background-color: #e9ecef;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: white;
+}
+
+.content-inner {
+    padding: 20px;
+}
+
+.arabic-text {
+    font-family: 'LPMQ Isep Misbah', 'Traditional Arabic', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 2;
+    text-align: right;
+    direction: rtl;
+    margin: 20px 0;
+    color: #1e293b;
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-right: 4px solid #3b82f6;
+}
+
+.arabic-text-2 {
+    font-family: 'Traditional Arabic', Arial, sans-serif;
+    font-size: 24px;
+    line-height: 2;
+    text-align: right;
+    direction: rtl;
+    color: #1e293b;
+}
+
+.basmallah {
+    font-family: 'LPMQ Isep Misbah', 'Traditional Arabic', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 2;
+    text-align: center;
+    direction: rtl;
+    margin: 20px 0;
+    color: #b45309;
+    background-color: #fff7ed;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-right: 4px solid #d97706;
+    border-left: 4px solid #d97706;
+    position: relative;
+}
+
+.basmallah::before,
+.basmallah::after {
+    content: "۞";
+    font-family: 'LPMQ Isep Misbah', 'Traditional Arabic', Arial, sans-serif;
+    font-size: 28px;
+    color: #d97706;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.basmallah::before {
+    left: 10px;
+}
+
+.basmallah::after {
+    right: 10px;
+}
+
+.taawudz {
+    font-family: 'LPMQ Isep Misbah', 'Traditional Arabic', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 2;
+    text-align: center;
+    direction: rtl;
+    margin: 20px 0;
+    color: #166534;
+    background-color: #ecfdf5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-right: 4px solid #16a34a;
+    border-left: 4px solid #16a34a;
+    position: relative;
+}
+
+.taawudz::before,
+.taawudz::after {
+    content: "۩";
+    color: #16a34a;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.taawudz::before {
+    left: 10px;
+}
+
+.taawudz::after {
+    right: 10px;
+}
+
+.takbir {
+    font-family: 'LPMQ Isep Misbah', 'Traditional Arabic', Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 2;
+    text-align: center;
+    direction: rtl;
+    margin: 20px 0;
+    color: #1d4ed8;
+    background-color: #eff6ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-right: 4px solid #2563eb;
+    border-left: 4px solid #2563eb;
+    position: relative;
+}
+
+.takbir::before,
+.takbir::after {
+    content: "✦";
+    font-family: 'LPMQ Isep Misbah', 'Traditional Arabic', Arial, sans-serif;
+    font-size: 28px;
+    color: #2563eb;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.takbir::before {
+    left: 10px;
+}
+
+.takbir::after {
+    right: 10px;
+}
+
+.basmallah span,
+.taawudz span,
+.takbir span {
+    position: relative;
+    z-index: 1;
+}
+
+.latin {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    color: #475569;
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    font-style: italic;
+    letter-spacing: 0.3px;
+    border: 1px solid #e2e8f0;
+}
+
+.translation {
+    font-family: 'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 15px 0 25px;
+    border-left: 4px solid #3b82f6;
+    padding: 18px 20px;
+    padding-top: 35px;
+    color: #334155;
+    font-size: 15px;
+    line-height: 1.7;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.translation::before {
+    font-family: 'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    content: "🔤";
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #334155;
+    font-size: 14px;
+}
+
+.translation::after {
+    font-family: 'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    content: "Terjemahan";
+    display: inline;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    color: #334155;
+    font-size: 14px;
+}
+
+.important {
+    font-family: 'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    padding: 18px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    color: #713f12;
+    font-size: 15px;
+    line-height: 1.7;
+    position: relative;
+    padding-top: 35px;
+}
+
+.important::before {
+    font-family: 'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    content: "📝";
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #92400e;
+    font-size: 14px;
+}
+
+.important::after {
+    font-family: 'Open Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    content: "Catatan";
+    display: inline;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    color: #92400e;
+    font-size: 14px;
+}
+
+h4 {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.arabic-inline {
+    font-family: 'LPMQ Isep Misbah', 'Traditional Arabic', Arial, sans-serif;
+    direction: rtl;
+    unicode-bidi: embed;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 0 0 20px 0;
+        overflow: hidden;
+    }
+    
+    h1 {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+    
+    .collapsible {
+        font-size: 17px;
+        padding: 12px 15px;
+    }
+    
+    .arabic-text {
+        font-size: 22px;
+        font-weight: 700;
+        padding: 15px;
+        line-height: 1.8;
+    }
+    
+    .basmallah,
+    .taawudz,
+    .takbir {
+        font-size: 22px;
+        font-weight: 700;
+        padding: 15px;
+    }
+
+    .basmallah::before,
+    .basmallah::after,
+    .taawudz::before,
+    .taawudz::after,
+    .takbir::before,
+    .takbir::after {
+        font-size: 20px;
+    }
+
+    .latin {
+        font-size: 15px;
+        padding: 12px;
+    }
+    
+    .translation {
+        font-size: 14px;
+        padding-top: 35px;
+        padding-bottom: 15px;
+    }
+    
+    .important {
+        font-size: 14px;
+        padding-top: 35px;
+        padding-bottom: 15px;
+    }
+    
+    h4 {
+        font-size: 19px;
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+    
+    .arabic-inline {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
