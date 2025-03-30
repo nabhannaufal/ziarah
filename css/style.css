@@ -1,0 +1,676 @@
+:root {
+    --primary-color: #3c4043;
+    --secondary-color: #5f6368;
+    --accent-color: #1a73e8;
+    --background-color: #f8f9fa;
+    --card-color: #ffffff;
+    --border-color: #dadce0;
+    --arabic-text-color: #1e293b;
+    --translation-color: #3c4043;
+    --latin-color: #5f6368;
+    --note-color: #66431d;
+    --note-bg-color: #fef9c3;
+    --arabic-font-size: 100%;
+    --arabic-font-family: 'Noto Naskh Arabic', 'LPMQ', 'AlQalamQuran', 'AlMushaf', 'Omar', 'Uthmanic', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', 'Poppins', 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 16px;
+    background-color: var(--card-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+h1, h2, .section-title, .subheading {
+    font-family: 'DM Serif Display', 'Merriweather', 'Lora', serif;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+main {
+    padding: 12px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+    background-color: var(--card-color);
+    margin-top: 24px;
+}
+
+.section {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.section-header {
+    background-color: var(--card-color);
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.section-content {
+    padding: 16px;
+}
+
+.item {
+    margin-bottom: 24px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.subheading {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.name-text {
+    font-family: 'DM Serif Display', 'Merriweather', 'Lora', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.standalone-note {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* Arabic Font Support */
+@font-face {
+    font-family: 'LPMQ';
+    src: url('../assets/fonts/lpmq.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AlQalamQuran';
+    src: url('../assets/fonts/alqalam.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AlMushaf';
+    src: url('../assets/fonts/almushaf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Omar';
+    src: url('../assets/fonts/omar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Uthmanic';
+    src: url('../assets/fonts/uthmanic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Arabic text - Option 1: Soft background color */
+.arabic-text {
+    font-family: var(--arabic-font-family);
+    font-size: calc(1.6rem * var(--arabic-font-size, 100%) / 100);
+    line-height: 2.2;
+    text-align: right;
+    direction: rtl;
+    color: #121212;
+    padding: 20px;
+    margin-bottom: 16px;
+    background-color: #f7f9fc; /* Soft light gray with slight blue tint */
+    border-radius: 8px;
+    position: relative;
+    box-shadow: none;
+    letter-spacing: 0;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    border-right: 4px solid #1d4ed8;
+}
+
+.arabic-text:hover {
+    background-color: #edf2fa; /* Slightly darker on hover for subtle interaction */
+}
+
+.bismillah {
+    font-family: var(--arabic-font-family);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    background-color: #f0f7ff; /* Soft light blue background */
+    border: none;
+    border-radius: 8px;
+    position: relative;
+    padding: 16px 20px;
+    box-shadow: none;
+    font-weight: 500;
+}
+
+.bismillah::before,
+.bismillah::after {
+    content: "۞";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1e3a8a;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.bismillah::before {
+    left: 15px;
+}
+
+.bismillah::after {
+    right: 15px;
+}
+
+.toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    margin-right: 8px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.toggle-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-btn i {
+    margin-right: 8px;
+    font-size: 0.95rem;
+}
+
+/* Specific button styles */
+.translation-btn {
+    background-color: #2563eb; /* Blue */
+    background-image: linear-gradient(135deg, #2563eb, #4f46e5);
+}
+
+.translation-btn:hover {
+    background-image: linear-gradient(135deg, #1d4ed8, #4338ca);
+}
+
+.latin-btn {
+    background-color: #10b981; /* Green */
+    background-image: linear-gradient(135deg, #10b981, #059669);
+}
+
+.latin-btn:hover {
+    background-image: linear-gradient(135deg, #059669, #047857);
+}
+
+.note-btn {
+    background-color: #f59e0b; /* Amber */
+    background-image: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.note-btn:hover {
+    background-image: linear-gradient(135deg, #d97706, #b45309);
+}
+
+.toggle-btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.translation-wrapper, .latin-wrapper {
+    margin-top: 12px;
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    display: none; /* Hidden by default for consistency */
+}
+
+.note-wrapper {
+    margin-top: 10px;
+    display: block; /* Notes always visible */
+}
+
+.translation-wrapper.visible, .latin-wrapper.visible {
+    display: block;
+}
+
+.translation {
+    font-size: 0.95rem;
+    color: var(--translation-color);
+    line-height: 1.7;
+    padding: 14px;
+    background-color: #eff6ff;
+    border-radius: 8px;
+    border-left: 4px solid #2563eb;
+}
+
+.latin {
+    font-family: 'Lora', serif;
+    font-size: 0.9rem;
+    color: var(--latin-color);
+    font-style: italic;
+    line-height: 1.7;
+    padding: 14px;
+    background-color: #ecfdf5;
+    border-radius: 8px;
+    border-left: 4px solid #10b981;
+}
+
+.note {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+.loading {
+    text-align: center;
+    padding: 24px;
+    color: var(--secondary-color);
+}
+
+.arabic-inline {
+    font-family: var(--arabic-font-family);
+    direction: rtl;
+    unicode-bidi: embed;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.pre-arabic-text {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* Font selection panel */
+.font-choice-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.font-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.font-option:hover {
+    background-color: #f3f4f6;
+}
+
+.font-option.selected {
+    background-color: #e8f0fe;
+    border-color: var(--accent-color);
+}
+
+.font-option input {
+    margin-right: 8px;
+}
+
+.font-preview {
+    font-size: 1.3rem;
+    margin-left: auto;
+    direction: rtl;
+    min-width: 85px;
+    text-align: right;
+}
+
+.font-preview-1 {
+    font-family: 'Noto Naskh Arabic', serif;
+}
+
+.font-preview-2 {
+    font-family: 'LPMQ', serif;
+}
+
+.font-preview-3 {
+    font-family: 'AlQalamQuran', serif;
+}
+
+.font-preview-4 {
+    font-family: 'AlMushaf', serif;
+}
+
+.font-preview-5 {
+    font-family: 'Omar', serif;
+}
+
+.font-preview-6 {
+    font-family: 'Uthmanic', serif;
+}
+
+/* Settings panel styles */
+.settings-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.settings-fab:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.settings-fab i {
+    font-size: 1.4rem;
+}
+
+.settings-panel {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    z-index: 99;
+    transform: translateY(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.settings-panel.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.settings-header h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.settings-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.settings-group {
+    margin-bottom: 12px;
+}
+
+.settings-group h4 {
+    font-size: 0.95rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+.settings-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.settings-option label {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* Toggle switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--accent-color);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+}
+
+/* Font size controls - slider version */
+.font-size-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 4px;
+}
+
+.font-size-slider {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    outline: none;
+}
+
+.font-size-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.font-size-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.font-size-slider::-webkit-slider-thumb:hover,
+.font-size-slider::-moz-range-thumb:hover {
+    background: #0d5bdd;
+    transform: scale(1.1);
+}
+
+.font-size-value {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    min-width: 45px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Adjust for larger screens */
+@media (min-width: 768px) {
+    main {
+        max-width: 680px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .arabic-text {
+        font-size: calc(1.7rem * var(--arabic-font-size, 100%) / 100);
+        padding: 22px 24px;
+        letter-spacing: 0.6px;
+    }
+    
+    .bismillah {
+        font-size: 1.5rem;
+        padding: 20px 24px;
+    }
+    
+    .bismillah::before,
+    .bismillah::after {
+        font-size: 1.2rem;
+    }
+    
+    .translation {
+        font-size: 1rem;
+        padding: 14px;
+    }
+    
+    .latin {
+        font-size: 0.95rem;
+        padding: 14px;
+    }
+    
+    .settings-panel {
+        width: 320px;
+    }
+    
+    .name-text {
+        font-size: 1.2rem;
+        margin-bottom: 16px;
+    }
+    
+    .pre-arabic-text {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}
