@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   loadContent();
   setupSettingsPanel();
+  setCurrentYear();
 });
 
 function loadContent() {
@@ -176,35 +177,25 @@ function setupSettingsPanel() {
         <div class="settings-group">
             <h4>Font Arab</h4>
             <div class="font-choice-group">
-                <label class="font-option selected">
-                    <input type="radio" name="font-choice" value="NotoNaskhArabic" checked>
+                <label class="font-option">
+                    <input type="radio" name="font-choice" value="ScheherazadeNew" checked>
+                    <span>Scheherazade New </span>
+                    <span class="font-preview font-preview-0">بِسْمِ اللّٰهِ</span>
+                </label>
+                <label class="font-option">
+                    <input type="radio" name="font-choice" value="NotoNaskhArabic">
                     <span>Noto Naskh Arabic</span>
                     <span class="font-preview font-preview-1">بِسْمِ اللّٰهِ</span>
+                </label>
+                <label class="font-option">
+                    <input type="radio" name="font-choice" value="Amiri">
+                    <span>Amiri (Klasik)</span>
+                    <span class="font-preview font-preview-amiri">بِسْمِ اللّٰهِ</span>
                 </label>
                 <label class="font-option">
                     <input type="radio" name="font-choice" value="LPMQ">
                     <span>LPMQ Isep Misbah</span>
                     <span class="font-preview font-preview-2">بِسْمِ اللّٰهِ</span>
-                </label>
-                <label class="font-option">
-                    <input type="radio" name="font-choice" value="AlQalamQuran">
-                    <span>Al Qalam Quran</span>
-                    <span class="font-preview font-preview-3">بِسْمِ اللّٰهِ</span>
-                </label>
-                <label class="font-option">
-                    <input type="radio" name="font-choice" value="AlMushaf">
-                    <span>Alvi (Al Mushaf)</span>
-                    <span class="font-preview font-preview-4">بِسْمِ اللّٰهِ</span>
-                </label>
-                <label class="font-option">
-                    <input type="radio" name="font-choice" value="Omar">
-                    <span>Omar</span>
-                    <span class="font-preview font-preview-5">بِسْمِ اللّٰهِ</span>
-                </label>
-                <label class="font-option">
-                    <input type="radio" name="font-choice" value="Uthmanic">
-                    <span>KFGQPC Uthmanic</span>
-                    <span class="font-preview font-preview-6">بِسْمِ اللّٰهِ</span>
                 </label>
             </div>
         </div>
@@ -227,7 +218,7 @@ function setupSettingsPanel() {
 
   // Initialize settings
   let currentFontSize = 100; // Default font size value that will be applied immediately
-  let currentFont = 'NotoNaskhArabic'; // Set Noto Naskh Arabic as the default
+  let currentFont = 'ScheherazadeNew'; // Set Scheherazade New as the default - better for beginners with clear harakat
   let translationsVisible = false;
   let latinVisible = false;
 
@@ -265,7 +256,17 @@ function setupSettingsPanel() {
   // Handle font selection
   const fontOptions = settingsPanel.querySelectorAll(".font-option");
   
+  // Set the initial selected font in UI
   fontOptions.forEach(option => {
+    const radioBtn = option.querySelector('input[type="radio"]');
+    if (radioBtn.value === currentFont) {
+      option.classList.add("selected");
+      radioBtn.checked = true;
+    } else {
+      option.classList.remove("selected");
+      radioBtn.checked = false;
+    }
+    
     option.addEventListener("click", function() {
       // Update selected UI
       fontOptions.forEach(opt => opt.classList.remove("selected"));
@@ -298,26 +299,20 @@ function setupSettingsPanel() {
     let fontFamily;
     
     switch(currentFont) {
+      case 'ScheherazadeNew':
+        fontFamily = "'Scheherazade New', serif";
+        break;
       case 'NotoNaskhArabic':
         fontFamily = "'Noto Naskh Arabic', serif";
         break;
+      case 'Amiri':
+        fontFamily = "'Amiri', serif";
+        break;
       case 'LPMQ':
-        fontFamily = "'LPMQ', 'Noto Naskh Arabic', serif";
-        break;
-      case 'AlQalamQuran':
-        fontFamily = "'AlQalamQuran', 'Noto Naskh Arabic', serif";
-        break;
-      case 'AlMushaf':
-        fontFamily = "'AlMushaf', 'Noto Naskh Arabic', serif";
-        break;
-      case 'Omar':
-        fontFamily = "'Omar', 'Noto Naskh Arabic', serif";
-        break;
-      case 'Uthmanic':
-        fontFamily = "'Uthmanic', 'Noto Naskh Arabic', serif";
+        fontFamily = "'LPMQ', 'Scheherazade New', serif";
         break;
       default:
-        fontFamily = "'Noto Naskh Arabic', serif";
+        fontFamily = "'Scheherazade New', serif";
     }
     
     document.documentElement.style.setProperty('--arabic-font-family', fontFamily);
@@ -367,4 +362,12 @@ function setupSettingsPanel() {
       settingsPanel.classList.remove("visible");
     }
   });
+}
+
+// Function to set current year in footer
+function setCurrentYear() {
+  const currentYearElement = document.getElementById("current-year");
+  if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+  }
 }

@@ -10,10 +10,6 @@
     
     <!-- Preload custom Quran fonts -->
     <link rel="preload" href="assets/fonts/lpmq.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/fonts/alqalam.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/fonts/almushaf.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/fonts/omar.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/fonts/uthmanic.otf" as="font" type="font/otf" crossorigin>
     
     <!-- More aesthetic regular fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Poppins:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -40,9 +36,12 @@
     </main>
 
     <footer>
-        <p>© Ziarah Kubur 2023</p>
+        <p>© Ziarah Kubur <span id="current-year"></span></p>
     </footer>
 
     <script src="js/app.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

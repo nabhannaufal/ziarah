@@ -11,7 +11,7 @@
     --note-color: #66431d;
     --note-bg-color: #fef9c3;
     --arabic-font-size: 100%;
-    --arabic-font-family: 'Noto Naskh Arabic', 'LPMQ', 'AlQalamQuran', 'AlMushaf', 'Omar', 'Uthmanic', serif;
+    --arabic-font-family: 'Scheherazade New', 'Noto Naskh Arabic', 'LPMQ', 'Amiri', serif;
 }
 
 * {
@@ -131,43 +131,11 @@ footer {
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'AlQalamQuran';
-    src: url('../assets/fonts/alqalam.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'AlMushaf';
-    src: url('../assets/fonts/almushaf.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Omar';
-    src: url('../assets/fonts/omar.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Uthmanic';
-    src: url('../assets/fonts/uthmanic.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 /* Arabic text - Option 1: Soft background color */
 .arabic-text {
     font-family: var(--arabic-font-family);
     font-size: calc(1.6rem * var(--arabic-font-size, 100%) / 100);
-    line-height: 2.2;
+    line-height: 2.4; /* Increased line height for better harakat spacing */
     text-align: right;
     direction: rtl;
     color: #121212;
@@ -177,7 +145,7 @@ footer {
     border-radius: 8px;
     position: relative;
     box-shadow: none;
-    letter-spacing: 0;
+    letter-spacing: 0.5px; /* Slight increase for better readability */
     transition: background-color 0.3s;
     font-weight: 500;
     border-right: 4px solid #1d4ed8;
@@ -396,6 +364,10 @@ footer {
     text-align: right;
 }
 
+.font-preview-0 {
+    font-family: 'Scheherazade New', serif;
+}
+
 .font-preview-1 {
     font-family: 'Noto Naskh Arabic', serif;
 }
@@ -404,20 +376,8 @@ footer {
     font-family: 'LPMQ', serif;
 }
 
-.font-preview-3 {
-    font-family: 'AlQalamQuran', serif;
-}
-
-.font-preview-4 {
-    font-family: 'AlMushaf', serif;
-}
-
-.font-preview-5 {
-    font-family: 'Omar', serif;
-}
-
-.font-preview-6 {
-    font-family: 'Uthmanic', serif;
+.font-preview-amiri {
+    font-family: 'Amiri', serif;
 }
 
 /* Settings panel styles */
